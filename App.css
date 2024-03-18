@@ -1,0 +1,569 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+img{
+  height:300px;
+  width:300px;
+  border-radius:50%;
+  position: 'absolute';
+  margin-left:80px;
+  margin-top: 50px;
+  box-shadow:5px 10px 15px;
+
+}
+body {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.left a {
+  display: inline-block; 
+  position: relative; 
+  color:black; 
+}
+
+.left a:after {
+  content: ''; 
+  position: absolute; 
+  width: 100%; 
+  transform: scaleX(0); 
+  height: 2px; 
+  bottom: 0; 
+  left: 0; 
+  background-color: black;
+  transform-origin: bottom right; 
+  transition: transform 0.25s ease-out; 
+}
+
+.left a:hover:after {
+  transform: scaleX(1); 
+  transform-origin: bottom left; 
+}
+.darkLight {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid rgb(248, 173, 173);
+  font-size: larger;
+  background-color: whitesmoke;
+}
+
+.Navbar {
+  height: 50px;
+  width: 100%;
+  background-image:linear-gradient( 
+    to right, #00bfff, #00ffd5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.Navbar a {
+  color: black;
+  text-decoration: none;
+  font-size: larger;
+  margin: 20px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  
+}
+
+.leftmain {
+  margin-top: 50px;
+  display: block;
+}
+
+#tex {
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 3s steps(30) infinite alternate, blink 800ms steps(25) infinite normal;
+  border-right: 5px solid black;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 106%;
+  }
+}
+
+.rightSect {
+  height: 550px;
+  width: 550px;
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-align: center;
+  border-radius: 20px;
+}
+.rightSect button {
+  height: 40px;
+  width: 100px;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.dropdown-content {
+  height: 500px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  background: azure;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 0 0 800px 800px rgba(222, 212, 212,0.5);
+  color: black;
+
+}
+.dropdown-content button{
+  height: 50px;
+  width: 150px;
+  background-color: orange;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media screen and (max-width:1030px) {
+  .rightSect {
+    height: 450px;
+    width: 450px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+  }
+  .rightSect button {
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 60px;
+  }
+  
+  .leftmain {
+    margin-top: -150px;
+    display: block;
+  }
+  
+  #tex {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 3s steps(30) infinite alternate, blink 800ms steps(25) infinite normal;
+    border-right: 5px solid black;
+  }
+  @keyframes typewriter {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 95%;
+    }
+  } 
+}
+/* @media screen and (max-width:1200) {
+  .leftmain {
+    margin-top: -400px;
+    display: block;
+  }
+  
+} */
+@media screen and (max-width:900px) {
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 450px;
+    flex-direction: column;
+  }
+  .leftmain {
+    margin-top: -450px;
+    display: block;
+  }
+  .rightSect {
+    height: 550px;
+    width: 550px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 50px;
+  }
+  .rightSect button {
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  .dropdown-content {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    background: azure;
+    flex-direction: column;
+    z-index: 1;
+    border-radius: 20px;
+  box-shadow: 0 0 800px 800px rgba(222, 212, 212,0.5);
+    color: black;
+  }
+  .dropdown-content button{
+    height: 50px;
+    width: 150px;
+    background-color: orange;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width:700px) {
+  .dropdown-content {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    background: azure;
+    flex-direction: column;
+    z-index: 1;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px;
+    color: black;
+  }
+  .dropdown-content button{
+    height: 50px;
+    width: 150px;
+    background-color: orange;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+}
+@media screen and (max-width:600px) {
+  .dropdown-content {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: absolute;
+    top: 20%;
+    left: auto;
+    background: azure;
+    flex-direction: column;
+    z-index: 1;
+    border-radius: 20px;
+    box-shadow: 10px 10px 30px;
+    color: black;
+  }
+  .dropdown-content button{
+    height: 50px;
+    width: 150px;
+    background-color: orange;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  .Navbar {
+    height: 50px;
+    width: 100%;
+    background-image:linear-gradient( 
+      to right, #00bfff, #00ffd5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .Navbar a {
+    color: black;
+    text-decoration: none;
+    font-size: larger;
+    margin: 5px;
+  }
+  .rightSect {
+    height: 400px;
+    width: 400px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 50px;
+  }
+  .rightSect button {
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+}
+  @media screen and (max-width: 550px) {
+    .Navbar {
+      height: 50px;
+      width: auto;
+      background-image:linear-gradient( 
+        to right, #00bfff, #00ffd5);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 5%;
+      padding-right: 5%;
+    }
+    
+    .Navbar a {
+      color: black;
+      text-decoration: none;
+      font-size: 14px; /* Adjust font size for smaller screens */
+      margin: 5px;
+    }
+  }
+  
+  
+@media screen and (max-width:460px) {
+  .rightSect {
+    height: 400px;
+    width: 400px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 150px;
+  }
+  .rightSect button {
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  
+.dropdown-content {
+  height: 500px;
+  width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: absolute;
+  top: 20%;
+  background: azure;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px;
+  color: black;
+}
+.dropdown-content button{
+  height: 50px;
+  width: 150px;
+  background-color: orange;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+}
+@media screen and (max-width:400px) {
+  .rightSect {
+    height: 300px;
+    width: 300px;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 150px;
+  }
+  .rightSect button {
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  img{
+    height:300px;
+    width:300px;
+    border-radius:50%;
+    position: 'absolute';
+    margin-left:30px;
+    margin-top: 50px;
+    box-shadow:5px 10px 15px;
+
+  }
+  
+.dropdown-content {
+  height: 500px;
+  width: 330px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: absolute;
+  top: 20%;
+  background: azure;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px;
+  color: black;
+}
+.dropdown-content button{
+  height: 50px;
+  width: 150px;
+  background-color: orange;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.leftmain h1{
+  font-size: 20px;
+}
+#tex {
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typewriter 3s steps(30) infinite alternate, blink 800ms steps(25) infinite normal;
+  border-right: 5px solid black;
+  margin-left: 16px;
+}
+.leftmain{
+  text-align: center;
+}
+}
+
+@media screen and (max-width:330px) {
+  img{
+    height:200px;
+    width:200px;
+    border-radius:50%;
+    position: 'absolute';
+    box-shadow:5px 10px 15px;
+
+    /* margin-left:80px; */
+    /* margin-top: 50px; */
+  }
+  #tex {
+    font-size: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typewriter 3s steps(30) infinite alternate, blink 800ms steps(25) infinite normal;
+    border-right: 2px solid black;
+    /* margin-left: 16px; */
+  }
+  @keyframes typewriter {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 69%;
+    }
+  }
+  .leftmain h1{
+    font-size: 15px;
+  }
+  .rightSect{
+    height: 300px;
+    width: 250px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+  }
+  .rightSect button{
+    height: 40px;
+    width: 100px;
+    font-size: 20px;
+    /* margin-top: 10px; */
+  }
+  
+.dropdown-content {
+  height: 700px;
+  width: 230px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: absolute;
+  top: 20%;
+  left: 14%;
+  background: azure;
+  flex-direction: column;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px;
+  color: black;
+}
+.dropdown-content button{
+  height: 50px;
+  width: 150px;
+  background-color: orange;
+  font-size: 20px;
+  border-style: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+}
